@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <title>Weather Simulator</title>
+</head>
+<body>
+  <h2>🌦️ Simulated Weather Forecast</h2>
+  <form method="POST" action="/weather">
+    <input type="text" name="state" placeholder="Enter state name" required>
+    <button type="submit">Check Weather</button>
+  </form>
+
+  {% if forecast %}
+    <h3>📍 {{ state }}: {{ forecast }}</h3>
+  {% endif %}
+</body>
+</html>
+
